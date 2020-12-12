@@ -1,0 +1,10 @@
+C:\Users\Mike\source\repos\LissajousCurve\LissajousCurve\bin\Debug\LissajousCurve.exe.config
+C:\Users\Mike\source\repos\LissajousCurve\LissajousCurve\bin\Debug\LissajousCurve.exe
+C:\Users\Mike\source\repos\LissajousCurve\LissajousCurve\bin\Debug\LissajousCurve.pdb
+C:\Users\Mike\source\repos\LissajousCurve\LissajousCurve\obj\Debug\LissajousCurve.csprojAssemblyReference.cache
+C:\Users\Mike\source\repos\LissajousCurve\LissajousCurve\obj\Debug\LissajousCurve.LissajousCurveForm.resources
+C:\Users\Mike\source\repos\LissajousCurve\LissajousCurve\obj\Debug\LissajousCurve.Properties.Resources.resources
+C:\Users\Mike\source\repos\LissajousCurve\LissajousCurve\obj\Debug\LissajousCurve.csproj.GenerateResource.cache
+C:\Users\Mike\source\repos\LissajousCurve\LissajousCurve\obj\Debug\LissajousCurve.csproj.CoreCompileInputs.cache
+C:\Users\Mike\source\repos\LissajousCurve\LissajousCurve\obj\Debug\LissajousCurve.exe
+C:\Users\Mike\source\repos\LissajousCurve\LissajousCurve\obj\Debug\LissajousCurve.pdb

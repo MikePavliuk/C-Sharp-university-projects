@@ -1,0 +1,10 @@
+C:\Users\Mike\source\repos\NumericalIntegration\NumericalIntegration\bin\Debug\NumericalIntegration.exe.config
+C:\Users\Mike\source\repos\NumericalIntegration\NumericalIntegration\bin\Debug\NumericalIntegration.exe
+C:\Users\Mike\source\repos\NumericalIntegration\NumericalIntegration\bin\Debug\NumericalIntegration.pdb
+C:\Users\Mike\source\repos\NumericalIntegration\NumericalIntegration\obj\Debug\NumericalIntegration.csprojAssemblyReference.cache
+C:\Users\Mike\source\repos\NumericalIntegration\NumericalIntegration\obj\Debug\NumericalIntegration.NumericalIntegrationForm.resources
+C:\Users\Mike\source\repos\NumericalIntegration\NumericalIntegration\obj\Debug\NumericalIntegration.Properties.Resources.resources
+C:\Users\Mike\source\repos\NumericalIntegration\NumericalIntegration\obj\Debug\NumericalIntegration.csproj.GenerateResource.cache
+C:\Users\Mike\source\repos\NumericalIntegration\NumericalIntegration\obj\Debug\NumericalIntegration.csproj.CoreCompileInputs.cache
+C:\Users\Mike\source\repos\NumericalIntegration\NumericalIntegration\obj\Debug\NumericalIntegration.exe
+C:\Users\Mike\source\repos\NumericalIntegration\NumericalIntegration\obj\Debug\NumericalIntegration.pdb

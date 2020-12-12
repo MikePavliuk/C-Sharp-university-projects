@@ -1,0 +1,10 @@
+C:\Users\Mike\source\repos\TicTacToc\TicTacToc\bin\Debug\TicTacToc.exe.config
+C:\Users\Mike\source\repos\TicTacToc\TicTacToc\bin\Debug\TicTacToc.exe
+C:\Users\Mike\source\repos\TicTacToc\TicTacToc\bin\Debug\TicTacToc.pdb
+C:\Users\Mike\source\repos\TicTacToc\TicTacToc\obj\Debug\TicTacToc.csprojAssemblyReference.cache
+C:\Users\Mike\source\repos\TicTacToc\TicTacToc\obj\Debug\TicTacToc.TicTacTocForm.resources
+C:\Users\Mike\source\repos\TicTacToc\TicTacToc\obj\Debug\TicTacToc.Properties.Resources.resources
+C:\Users\Mike\source\repos\TicTacToc\TicTacToc\obj\Debug\TicTacToc.csproj.GenerateResource.cache
+C:\Users\Mike\source\repos\TicTacToc\TicTacToc\obj\Debug\TicTacToc.csproj.CoreCompileInputs.cache
+C:\Users\Mike\source\repos\TicTacToc\TicTacToc\obj\Debug\TicTacToc.exe
+C:\Users\Mike\source\repos\TicTacToc\TicTacToc\obj\Debug\TicTacToc.pdb

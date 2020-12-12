@@ -1,0 +1,10 @@
+C:\Users\Mike\source\repos\SparseMatrix\SparseMatrix\bin\Debug\SparseMatrix.exe.config
+C:\Users\Mike\source\repos\SparseMatrix\SparseMatrix\bin\Debug\SparseMatrix.exe
+C:\Users\Mike\source\repos\SparseMatrix\SparseMatrix\bin\Debug\SparseMatrix.pdb
+C:\Users\Mike\source\repos\SparseMatrix\SparseMatrix\obj\Debug\SparseMatrix.csprojAssemblyReference.cache
+C:\Users\Mike\source\repos\SparseMatrix\SparseMatrix\obj\Debug\SparseMatrix.Properties.Resources.resources
+C:\Users\Mike\source\repos\SparseMatrix\SparseMatrix\obj\Debug\SparseMatrix.csproj.GenerateResource.cache
+C:\Users\Mike\source\repos\SparseMatrix\SparseMatrix\obj\Debug\SparseMatrix.csproj.CoreCompileInputs.cache
+C:\Users\Mike\source\repos\SparseMatrix\SparseMatrix\obj\Debug\SparseMatrix.exe
+C:\Users\Mike\source\repos\SparseMatrix\SparseMatrix\obj\Debug\SparseMatrix.pdb
+C:\Users\Mike\source\repos\SparseMatrix\SparseMatrix\obj\Debug\SparseMatrix.SparseMatrix.resources
