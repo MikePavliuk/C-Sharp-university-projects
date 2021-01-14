@@ -1,0 +1,54 @@
+﻿@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+@model IndexPageViewModel
+@{
+    ViewData["Title"] = "Home Page!";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Products list</h1>
+    <div class="products-container">
+        @foreach (Product entity in Model.Products)
+        {
+            <div class="product-item">
+                <div class="product-img">
+                    <img src="~/images/titleImage.png" />
+                </div>
+                <div class="product-title">
+                    @entity.Title
+                </div>
+                <div class="product-desc">
+                    @entity.Information.TruncateHtmlString(300)
+                </div>
+                <div class="product-os">
+                    <span>OS supported:</span>
+                    @entity.OS
+                </div>
+                <div class="product-price">
+                    <span>Price: </span> @entity.Price.ToString("C")
+                </div>
+                <div class="product-links">
+                    <a class="link-main" asp-area="" asp-controller="Catalog" asp-action="DownloadDemo" asp-route-id="@entity.Id">
+                        Download demo
+                    </a>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <form asp-route="default"
+                              asp-route-controller="@nameof(CatalogController).CutController()"
+                              asp-route-action="@nameof(CatalogController.NewOrder)"
+                              asp-route-productId="@entity.Id"
+                              method="post">
+                            <input class="link-main important" type="submit" value="Buy it!" />
+                        </form>
+                    }
+                    else
+                    {
+                        <a class="link-main important" href="#" onclick="alert('Please log in before you can buy software!'); return false;">
+                            Buy it!
+                        </a>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,32 @@
+﻿@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SoftwareStore</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            @if (SignInManager.IsSignedIn(User))
+            {
+                if (User.IsInRole(ConstantsWeb.Database.AdminRoleName))
+                {
+                    <a asp-area="" asp-controller="Admin" asp-action="Index">
+                        Admin panel
+                    </a>
+                }
+                <a asp-area="" asp-controller="Account" asp-action="Index">
+                    My profile
+                </a>
+            }
+            else
+            {
+                <a class="link-login" asp-area="" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@Context.Request.GetUri()">
+                    Login
+                </a>
+            }
+        </div>
+    </nav>
+</header>

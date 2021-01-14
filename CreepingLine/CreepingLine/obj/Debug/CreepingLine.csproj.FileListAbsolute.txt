@@ -8,3 +8,13 @@ C:\Users\Mike\source\repos\CreepingLine\CreepingLine\obj\Debug\CreepingLine.cspr
 C:\Users\Mike\source\repos\CreepingLine\CreepingLine\obj\Debug\CreepingLine.csproj.CoreCompileInputs.cache
 C:\Users\Mike\source\repos\CreepingLine\CreepingLine\obj\Debug\CreepingLine.exe
 C:\Users\Mike\source\repos\CreepingLine\CreepingLine\obj\Debug\CreepingLine.pdb
+C:\Users\Mike\source\repos\C-Sharp-university-projects\CreepingLine\CreepingLine\bin\Debug\CreepingLine.exe.config
+C:\Users\Mike\source\repos\C-Sharp-university-projects\CreepingLine\CreepingLine\bin\Debug\CreepingLine.exe
+C:\Users\Mike\source\repos\C-Sharp-university-projects\CreepingLine\CreepingLine\bin\Debug\CreepingLine.pdb
+C:\Users\Mike\source\repos\C-Sharp-university-projects\CreepingLine\CreepingLine\obj\Debug\CreepingLine.csprojAssemblyReference.cache
+C:\Users\Mike\source\repos\C-Sharp-university-projects\CreepingLine\CreepingLine\obj\Debug\CreepingLine.CreepingLineForm.resources
+C:\Users\Mike\source\repos\C-Sharp-university-projects\CreepingLine\CreepingLine\obj\Debug\CreepingLine.Properties.Resources.resources
+C:\Users\Mike\source\repos\C-Sharp-university-projects\CreepingLine\CreepingLine\obj\Debug\CreepingLine.csproj.GenerateResource.cache
+C:\Users\Mike\source\repos\C-Sharp-university-projects\CreepingLine\CreepingLine\obj\Debug\CreepingLine.csproj.CoreCompileInputs.cache
+C:\Users\Mike\source\repos\C-Sharp-university-projects\CreepingLine\CreepingLine\obj\Debug\CreepingLine.exe
+C:\Users\Mike\source\repos\C-Sharp-university-projects\CreepingLine\CreepingLine\obj\Debug\CreepingLine.pdb

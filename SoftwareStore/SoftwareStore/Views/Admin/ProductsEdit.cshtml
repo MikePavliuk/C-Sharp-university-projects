@@ -1,0 +1,44 @@
+﻿@model Product
+@{
+    string strTitle = Model.Id == default ? "Add new product" : "Edit product";
+    string strDescription = "";
+    ViewBag.Title = strTitle;
+    ViewBag.Description = strDescription;
+}
+<div class="padding-hoz">
+    <h1>@strTitle</h1>
+    <div>
+        <form asp-route="default"
+              asp-route-controller="@nameof(AdminController).CutController()"
+              asp-route-action="@nameof(AdminController.ProductsEdit)"
+              method="post"
+              enctype="multipart/form-data">
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="DateAdded" />
+            <div asp-validation-summary="All"></div>
+            <div class="padding-ver">
+                <label asp-for="Title"></label>
+                <input asp-for="Title" />
+                <span asp-validation-for="Title"></span>
+            </div>
+            <div class="padding-ver">
+                <label asp-for="Information"></label>
+                <textarea asp-for="Information" rows="5"></textarea>
+                <span asp-validation-for="Information"></span>
+            </div>
+            <div class="padding-ver">
+                <label asp-for="OS"></label>
+                <input asp-for="OS" />
+                <span asp-validation-for="OS"></span>
+            </div>
+            <div class="padding-ver">
+                <label asp-for="Price"></label>
+                <input asp-for="Price" />
+                <span asp-validation-for="Price"></span>
+            </div>
+            <div>
+                <input class="link-main" type="submit" value="Done" />
+            </div>
+        </form>
+    </div>
+</div>

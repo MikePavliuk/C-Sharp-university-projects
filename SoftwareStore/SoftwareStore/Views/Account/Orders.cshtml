@@ -1,0 +1,53 @@
+﻿@model List<Order>
+
+@{
+    string strTitle = "My orders";
+    ViewData["Title"] = strTitle;
+}
+
+<div>
+    <h1>@strTitle</h1>
+    <div class="orders-container">
+        @foreach (Order entity in Model.OrderByDescending(x=>x.DateAdded))
+        {
+            <div class="order-item">
+                <div class="order-id">
+                    <b>Order ID: </b>@entity.Id
+                </div>
+                <div class="order-date">
+                    <b>Order date: </b>@entity.DateAdded
+                </div>
+                <div class="order-product">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="~/images/titleImage.png" />
+                        </div>
+                        <div class="product-title">
+                            @entity.Product.Title
+                        </div>
+                        <div class="product-desc">
+                            @entity.Product.Information.TruncateHtmlString(300)
+                        </div>
+                        <div class="product-os">
+                            <span>OS supported:</span>
+                            @entity.Product.OS
+                        </div>
+                        <div class="product-price">
+                            <span>Price: </span> @entity.Product.Price.ToString("C")
+                        </div>
+                        <div class="product-links">
+                            <a class="link-main important" asp-area="" asp-controller="Catalog" asp-action="Download" asp-route-id="@entity.Product.Id">
+                                Download
+                            </a>
+                            <a class="link-main" asp-area="" asp-controller="Catalog" asp-action="DownloadDemo" asp-route-id="@entity.Product.Id">
+                                Download demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

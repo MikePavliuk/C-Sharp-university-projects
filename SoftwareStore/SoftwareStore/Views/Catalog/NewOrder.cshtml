@@ -1,0 +1,28 @@
+﻿@model CheckoutViewModel
+
+@{
+    ViewData["Title"] = "New Order";
+}
+
+<div>
+    <h1>Dear @Model.User.UserName!</h1>
+    <h2>Thank you for your purchase!</h2>
+    <div>
+        <b>Order ID: </b>@Model.OrderId
+    </div>
+    <div>
+        <b>Item: </b>@Model.Product.Title
+    </div>
+</div>
+<div class="checkout-payment">
+    <h3>Payment area</h3>
+    Visa, MasterCard....
+</div>
+<div>
+    <h3>
+        Now you can download purchased software in your 
+        <a asp-area="" asp-controller="Account" asp-action="Index">
+            profile
+        </a>.
+    </h3>
+</div>

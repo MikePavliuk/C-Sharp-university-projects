@@ -1,0 +1,35 @@
+﻿@model LoginViewModel
+@{
+    string strTitle = "Login";
+    string strDescription = "";
+    ViewBag.Title = strTitle;
+    ViewBag.Description = strDescription;
+}
+<div class="login padding-hoz">
+    <h1>@strTitle</h1>
+    <div>
+        <form asp-route="default"
+              asp-route-controller="@nameof(AccountController).CutController()"
+              asp-route-action="@nameof(AccountController.Login)"
+              asp-route-returnUrl="@ViewBag.ReturnUrl"
+              method="post">
+            <div asp-validation-summary="All"></div>
+            <div class="padding-ver">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" />
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div class="padding-ver">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" />
+                <span asp-validation-for="Password"></span>
+            </div>
+            <div>
+                <input class="link-main" type="submit" value="Log in" />
+            </div>
+        </form>
+        <div class="padding-ver">
+            Still don't have an account? Please <a class="color-blue" asp-area="" asp-controller="Account" asp-action="Register" asp-route-returnUrl="@Context.Request.GetUri()">Register.</a>
+        </div>
+    </div>
+</div>

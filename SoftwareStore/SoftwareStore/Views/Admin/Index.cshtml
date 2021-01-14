@@ -1,0 +1,133 @@
+﻿@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+@model AdminViewModel
+@{
+    string strTitle = "Admin panel";
+    ViewData["Title"] = strTitle;
+    AppUser user = await UserManager.GetUserAsync(User);
+
+    int counter = 1;
+}
+
+<div>
+    <h1>@strTitle</h1>
+</div>
+<div>
+    <h2>Products</h2>
+    <div>
+        <a asp-area="" asp-action="ProductsEdit" asp-controller="Admin" asp-route-id="">
+            Add new product
+        </a>
+    </div>
+    <div>
+        @foreach (Product entity in Model.Products.OrderBy(x => x.Title))
+        {
+            <div>
+                <form class="frm-admin" asp-route="default"
+                      asp-route-controller="@nameof(AdminController).CutController()"
+                      asp-route-action="@nameof(AdminController.ProductsDelete)"
+                      asp-route-id="@entity.Id"
+                      method="post">
+                    <div>
+                        @($"{counter}. {entity.Title} ") |
+                        <a asp-area="" asp-action="ProductsEdit" asp-controller="Admin" asp-route-id="@entity.Id">
+                            edit
+                        </a> |
+                        <input onclick="return confirm('Are you sure?');" class="link-main danger" type="submit" value="delete" />
+                    </div>
+                </form>
+            </div>
+            counter++;
+        }
+    </div>
+</div>
+@{
+    counter = 1;
+}
+<div>
+    <h2>Users</h2>
+    @foreach (AppUser entity in Model.Users.Where(x => x.Id != user.Id))@*get all users except this one*@
+    {
+        <div>
+            <form class="frm-admin" asp-route="default"
+                  asp-route-controller="@nameof(AdminController).CutController()"
+                  asp-route-action="@nameof(AdminController.AppUsersDelete)"
+                  asp-route-id="@entity.Id"
+                  method="post">
+                <div>
+                    @($"{counter}. {entity.UserName}") | <input onclick="return confirm('Are you sure?');" class="link-main danger" type="submit" value="delete" />
+                </div>
+            </form>
+        </div>
+        counter++;
+    }
+</div>
+@{
+    counter = 1;
+}
+<div>
+    <h2>Orders</h2>
+    @foreach (Order entity in Model.Orders.OrderByDescending(x => x.DateAdded))
+    {
+        <div>
+            <form class="frm-admin" asp-route="default"
+                  asp-route-controller="@nameof(AdminController).CutController()"
+                  asp-route-action="@nameof(AdminController.OrdersDelete)"
+                  asp-route-orderId="@entity.Id"
+                  method="post">
+                <div>
+                    @($"{counter}. Date: {entity.DateAdded}. User: {entity.AppUser.UserName}. Product: {entity.Product.Title} ") | <input onclick="return confirm('Are you sure?');" class="link-main danger" type="submit" value="delete" />
+                </div>
+            </form>
+        </div>
+        counter++;
+    }
+</div>
+@{
+    counter = 1;
+}
+<div>
+    <h2>Orders filter</h2>
+    <div>
+        <form class="frm-admin" asp-route="default"
+              asp-route-controller="@nameof(AdminController).CutController()"
+              asp-route-action="@nameof(AdminController.Index)"
+              method="get">
+            <div>
+                <select name="productid">
+                    <option value="">... select product ...</option>
+                    @foreach (Product entity in Model.Products.OrderBy(x => x.Title))
+                    {
+                        if (ViewBag.ProductId != null && entity.Id == Guid.Parse(ViewBag.ProductId))
+                        {
+                            <option selected value="@entity.Id">@entity.Title</option>
+                        }
+                        else
+                        {
+                            <option value="@entity.Id">@entity.Title</option>
+                        }
+                    }
+                </select>
+                <input type="text" name="datefrom" placeholder="Date from..." value="@ViewBag.DateFrom" />
+                <input type="text" name="dateto" placeholder="Date to..." value="@ViewBag.DateTo" />
+                <input class="link-main" type="submit" value="apply filter" />
+            </div>
+        </form>
+    </div>
+    <div>
+        @foreach (Order entity in Model.OrdersFiltered.OrderByDescending(x => x.DateAdded))
+        {
+            <div>
+                @($"{counter}. Order ID: {entity.Id}. Date: {entity.DateAdded}. Product: {entity.Product.Title}")
+            </div>
+            counter++;
+        }
+        <div>
+            <b>Filtered orders total:</b> @Model.OrdersFiltered.Count
+        </div>
+    </div>
+</div>
+@{
+    counter = 1;
+}
+

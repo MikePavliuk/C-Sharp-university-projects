@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+    <h2>Hello, @User.Identity.Name</h2>
+    <div class="padding-ver">
+        <a asp-area="" asp-action="Orders" asp-controller="Account">
+            My orders
+        </a>
+    </div>
+    <form class="frm" asp-route="default"
+          asp-route-controller="@nameof(AccountController).CutController()"
+          asp-route-action="@nameof(AccountController.Logout)"
+          asp-route-returnUrl="@ViewBag.returnUrl"
+          method="post">
+        <input class="link-main" type="submit" value="Logout"/>
+    </form>
+</div>
